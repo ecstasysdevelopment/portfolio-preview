@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecstasys.dev about-me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'light-bg': '#111827',
+                        'dark-text': '#FFFFFF',
+                        'dark-blue': '#1E3A8A',
+                    },
+                    animation: {
+                        'slide-reveal': 'slideReveal 0.8s ease-out',
+                        'rotate-in': 'rotateIn 1s ease-out',
+                        'gradient-flow': 'gradientFlow 12s linear infinite',
+                    },
+                    keyframes: {
+                        slideReveal: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        rotateIn: {
+                            '0%': { transform: 'rotate(-5deg) scale(0.98)' },
+                            '100%': { transform: 'rotate(0deg) scale(1)' },
+                        },
+                        gradientFlow: {
+                            '0%': { backgroundPosition: '0% 50%' },
+                            '100%': { backgroundPosition: '200% 50%' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body, section {
+            background: linear-gradient(90deg, #111827, #1E3A8A, #111827);
+            background-size: 200% 200%;
+            animation: gradient-flow 12s linear infinite;
+        }
+        nav {
+            z-index: 100;
+            transition: all 0.5s ease-in-out;
+        }
+        nav.hidden {
+            transform: translateY(-5rem);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="text-dark-text font-sans">
+    <nav id="navbar" class="fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-7xl bg-gray-900/30 backdrop-blur-md z-50 rounded-3xl border border-white/10 shadow-sm">
+        <div class="flex justify-between items-center px-6 py-4">
+            <div class="text-2xl font-bold text-dark-text">ecstasys.dev</div>
+            <div class="flex space-x-4">
+                <a href="../index.html" class="text-md text-dark-text px-4 py-2 rounded-lg hover:text-dark-blue hover:-translate-y-2 transition duration-300 transform animate-slide-reveal">Home</a>
+                <a href="about.html" class="text-md text-dark-text px-4 py-2 rounded-lg hover:text-dark-blue hover:-translate-y-2 transition duration-300 transform animate-slide-reveal">About Me</a>
+                <a href="contact.html" class="text-md text-dark-text px-4 py-2 rounded-lg hover:text-dark-blue hover:-translate-y-2 transition duration-300 transform animate-slide-reveal">Contact</a>
+                <a href="additional.html" class="text-md text-dark-text px-4 py-2 rounded-lg hover:text-dark-blue hover:-translate-y-2 transition duration-300 transform animate-slide-reveal">Additional Info</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen pt-32 pb-20 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 animate-slide-reveal text-dark-text">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="animate-slide-reveal bg-gray-900/30 backdrop-blur-md p-8 rounded-xl hover:bg-gray-900/40 hover:-translate-y-2 transition duration-300 border border-white/10 shadow-sm">
+                    <p class="text-lg text-dark-text leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="text-lg text-dark-text leading-relaxed mt-4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="../assets/profile.png" alt="Profile" class="rounded-full h-80 w-80 object-cover hover:-translate-y-2 transition duration-300 animate-rotate-in">
+                </div>
+            </div>
+            <div class="mt-16 text-center">
+                <h3 class="text-2xl font-semibold text-dark-text mb-8 animate-slide-reveal">My Skills</h3>
+                <div class="flex flex-wrap justify-center gap-4 animate-slide-reveal">
+                    <img src="https://skillicons.dev/icons?i=lua" alt="lua" class="h-12 hover:scale-125 hover:brightness-100 brightness-80 hover:-translate-y-2 transition duration-300">
+                    <img src="https://skillicons.dev/icons?i=html" alt="html" class="h-12 hover:scale-125 hover:brightness-100 brightness-80 hover:-translate-y-2 transition duration-300">
+                    <img src="https://skillicons.dev/icons?i=css" alt="css" class="h-12 hover:scale-125 hover:brightness-100 brightness-80 hover:-translate-y-2 transition duration-300">
+                    <img src="https://skillicons.dev/icons?i=js" alt="js" class="h-12 hover:scale-125 hover:brightness-100 brightness-80 hover:-translate-y-2 transition duration-300">
+                    <img src="https://skillicons.dev/icons?i=python" alt="python" class="h-12 hover:scale-125 hover:brightness-100 brightness-80 hover:-translate-y-2 transition duration-300">
+                    <img src="https://skillicons.dev/icons?i=cpp" alt="cpp" class="h-12 hover:scale-125 hover:brightness-100 brightness-80 hover:-translate-y-2 transition duration-300">
+                    <img src="https://skillicons.dev/icons?i=mysql" alt="mysql" class="h-12 hover:scale-125 hover:brightness-100 brightness-80 hover:-translate-y-2 transition duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 animate-slide-reveal text-dark-text">My Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="animate-slide-reveal bg-gray-900/30 backdrop-blur-md p-6 rounded-xl hover:bg-gray-900/40 hover:-translate-y-2 transition duration-300 border border-white/10 shadow-sm">
+                    <h3 class="text-xl font-semibold text-dark-text mb-4">Example Project</h3>
+                    <p class="text-dark-text">Exapmle description of the project.</p>
+                </div>
+                <div class="animate-slide-reveal bg-gray-900/30 backdrop-blur-md p-6 rounded-xl hover:bg-gray-900/40 hover:-translate-y-2 transition duration-300 border border-white/10 shadow-sm">
+                    <h3 class="text-xl font-semibold text-dark-text mb-4">Example Project #2</h3>
+                    <p class="text-dark-text">Exapmle description of the project.</p>
+                </div>
+                <div class="animate-slide-reveal bg-gray-900/30 backdrop-blur-md p-6 rounded-xl hover:bg-gray-900/40 hover:-translate-y-2 transition duration-300 border border-white/10 shadow-sm">
+                    <h3 class="text-xl font-semibold text-dark-text mb-4">Example Project #3</h3>
+                    <p class="text-dark-text">Exapmle description of the project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 animate-slide-reveal text-dark-text">My Journey</h2>
+            <div class="space-y-8">
+                <div class="animate-slide-reveal bg-gray-900/30 backdrop-blur-md p-6 rounded-xl hover:bg-gray-900/40 hover:-translate-y-2 transition duration-300 border border-white/10 shadow-sm">
+                    <h3 class="text-lg font-semibold text-dark-text">2025 - Example Award #3</h3>
+                    <p class="text-dark-text mt-2">Example Sentence.</p>
+                </div>
+                <div class="animate-slide-reveal bg-gray-900/30 backdrop-blur-md p-6 rounded-xl hover:bg-gray-900/40 hover:-translate-y-2 transition duration-300 border border-white/10 shadow-sm">
+                    <h3 class="text-lg font-semibold text-dark-text">2020 - Example Award #2</h3>
+                    <p class="text-dark-text mt-2">Example Sentence.</p>
+                </div>
+                <div class="animate-slide-reveal bg-gray-900/30 backdrop-blur-md p-6 rounded-xl hover:bg-gray-900/40 hover:-translate-y-2 transition duration-300 border border-white/10 shadow-sm">
+                    <h3 class="text-lg font-semibold text-dark-text">Example Award</h3>
+                    <p class="text-dark-text mt-2">Example Sentence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.classList.add('hidden');
+            } else {
+                navbar.classList.remove('hidden');
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+
+    <footer class="py-6 text-center">
+        <p class="text-dark-text">© 2025 Ecstasys Development. All rights reserved.</p>
+    </footer>
+</body>
+</html>
